@@ -42,11 +42,13 @@ async function run(){
     const task = process.argv[3]
     if (!task) {
       console.log('TASK NOT FOUND')
-      process.exit(0)
     }
 
-    const todo = await db('todo').create({ task })
-    console.log(todo.id)
+    else {
+
+      const todo = await db('todo').create({ task })
+      console.log(todo.id + ' added')
+    }
   }
 
   else if (command == 'update') {
