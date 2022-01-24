@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongowave": "^0.2.5"
+    "mongowave": "^0.2.6"
   }
 }
