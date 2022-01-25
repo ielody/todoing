@@ -38,21 +38,21 @@ async function run(){
   }
 
   else if (command == 'create') {
-    console.log('Do create stuff')
+    console.log('Add an item to your list')
     const task = process.argv[3]
     if (!task) {
       console.log('TASK NOT FOUND')
     }
 
     else {
-
       const todo = await db('todo').create({ task })
-      console.log(todo.id + ' added')
+      console.log(todo.task + ' added')
     }
   }
 
   else if (command == 'update') {
     console.log('Do update stuff')
+
   }
 
   else if (command == 'delete') {
