@@ -45,56 +45,30 @@ async function run(){
       console.log('TASK NOT FOUND')
     }
 
-
     else {
       const todo = await db('todo').create({ task })
       console.log(todo.task + ' added')
     }
   }
 
+
   else if (command == 'update') {
+     console.log('Update a task')
+     const task = process.argv[4]
+     if(!task) {
+       console.log('Not found')
+     }
 
-      const task = process.argv[4]
-      if(!task) {
-        console.log('Ikke funnet')
-      }
-       //kjør liste
-        // const todos = await db('todo').find()
-        // todos.forEach((todo, i) => {
-        // console.log(`${i + 1}: ${todo.task}`)})
-
-        // nummer
-      //   console.log('\nEnter the number of the task to update')
-      //   const number = process.argv[5]
-      //   console.log(process.argv[5])
-      //   const index = parseInt(number) - 1
-      //   const todoupdate = todos[index]
-      //   if(todoupdate) {
-      //     await db('todo').delete({ id: todoupdate.id })
-      //   }
-
-      //   else if (!todoupdate) {
-      //     console.log('Invalid todo number')
-      //   }
-
-      // console.log('Etter nummer')
-        //const text = process.argv[6]
-
-     else {
-
-      const todo = await db('todo').update({id: task.id }, {task: task})
-      console.log('updated', todo, 'to', task)
+    else {
+      const todo = await db('todo').update({id: task.id }, {task: todo.task})
+      console.log('updated to', todo.task)
     }
-
   }
+
 
   else if (command == 'delete') {
-  console.log('Do delete stuff')
-
+    console.log('Delete a task')
   }
-  // else if (command == 'done') {
-  //   console.log('Do done stuff')
-  // }
 
   process.exit(0)
 
