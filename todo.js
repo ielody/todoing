@@ -54,13 +54,16 @@ async function run(){
 
   else if (command == 'update') {
      console.log('Update a task')
-     const task = process.argv[4]
-     if(!task) {
+     var list = await db('todo').find()
+     console.log(list)
+     var index = parseInt(process.argv[4]) - 1
+     var todo = list[index]
+     if(!todo) {
        console.log('Not found')
-     }
+    }
 
     else {
-      const todo = await db('todo').update({id: task.id }, {task: todo.task})
+      const todo = await db('todo').update({id: todo.id }, { task })
       console.log('updated to', todo.task)
     }
   }
