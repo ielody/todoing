@@ -1,12 +1,12 @@
 {
-  "name": "todo-ing",
-  "version": "1.0.0",
-  "description": "",
+  "name": "todoing",
+  "version": "0.0.1",
+  "description": "Terminal todo list manager",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ingeborg Eldøy <ieldoy@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "extras": "^0.10.4",
