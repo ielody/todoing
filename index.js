@@ -21,7 +21,7 @@ if (!command) {
   process.exit(0)
 }
 
-async function run(){
+module.exports = async function run(){
   const db = await connection({ name: 'todo-ing' })
 
   const fn = api[command]
@@ -32,7 +32,6 @@ async function run(){
   }
   process.exit(0)
 }
-run()
 
 // Advanced debugging:
 // const obj = { a: 1, b: 2, c: 3, d: { f: { cuckoo: 5, world: 'hello'}} }
