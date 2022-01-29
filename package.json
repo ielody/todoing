@@ -2,13 +2,14 @@
   "name": "todo-ing",
   "version": "1.0.0",
   "description": "",
-  "main": "todo.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "extras": "^0.10.4",
     "mongowave": "^0.2.6"
   }
 }
