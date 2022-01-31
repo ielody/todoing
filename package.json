@@ -1,6 +1,6 @@
 {
   "name": "todoing",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Terminal todo list manager",
   "main": "index.js",
   "bin": {
