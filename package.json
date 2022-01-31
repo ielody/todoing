@@ -4,7 +4,8 @@
   "description": "Terminal todo list manager",
   "main": "index.js",
   "bin": {
-    "td": "bin/todoing.js"
+    "td": "bin/todoing.js",
+    "l": "/lib/list.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

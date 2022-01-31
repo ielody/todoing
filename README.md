@@ -19,6 +19,7 @@ td update 1 "Eat bacon"
 
 # Delete todo
 td delete 1
+td delete n,n,n to delete more tasks
 ```
 
 ISC licensed. Enjoy!
