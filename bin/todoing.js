@@ -3,7 +3,13 @@ const connection = require('mongowave')
 
 const api = require('../index.js')
 
-const command = process.argv[2]
+let command = process.argv[2]
+
+if (command[0] == 'l') command = 'list'
+if (command[0] == 'c') command = 'create'
+if (command[0] == 'u') command = 'update'
+if (command[0] == 'r') command = 'remove'
+if (command[0] == 'd') command = 'done'
 
 if (!command) {
   console.log('Command not found.')
@@ -11,7 +17,7 @@ if (!command) {
   // todo list
   // todo create "Buy milk"
   // todo update 1 "Buy butter"
-  // todo delete 1
+  // todo remove 1
   // todo done 1
   process.exit(0)
 }
