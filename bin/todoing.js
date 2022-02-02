@@ -12,7 +12,7 @@ if (command[0] == 'r') command = 'remove'
 if (command[0] == 'd') command = 'done'
 
 if (!command) {
-  console.log('Command not found.')
+  console.log(c.red('Command not found.'))
   // TODO: print menu
   // todo list
   // todo create "Buy milk"
@@ -29,7 +29,7 @@ async function run(){
   if (typeof fn == 'function') {
     await fn(db)
   } else  {
-    console.log('Command not found.')
+    console.log(c.red('Command not found.'))
   }
   process.exit(0)
 }
