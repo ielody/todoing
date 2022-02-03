@@ -1,6 +1,7 @@
 #!/usr/bin/env node
+const { input } = require('extras')
 const connection = require('mongowave')
-
+const c = require('ansi-colors')
 const api = require('../index.js')
 
 let command = process.argv[2]
@@ -10,6 +11,7 @@ if (command[0] == 'c') command = 'create'
 if (command[0] == 'u') command = 'update'
 if (command[0] == 'r') command = 'remove'
 if (command[0] == 'd') command = 'done'
+
 
 if (!command) {
   console.log(c.red('Command not found.'))
