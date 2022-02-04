@@ -4,8 +4,7 @@
   "description": "Terminal todo list manager",
   "main": "index.js",
   "bin": {
-    "td": "bin/todoing.js",
-    "l": "/lib/list.js"
+    "td": "bin/todoing.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +12,7 @@
   "author": "Ingeborg Eldøy <ieldoy@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "ansi-colors": "^4.1.1",
     "extras": "^0.10.4",
     "mongowave": "^0.2.6"
   }
