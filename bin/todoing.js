@@ -11,7 +11,7 @@ if (command[0] == 'c') command = 'create'
 if (command[0] == 'u') command = 'update'
 if (command[0] == 'r') command = 'remove'
 if (command[0] == 'd') command = 'done'
-
+if (command[0] == 'h') command = 'help'
 
 if (!command) {
   console.log(c.red('Command not found.'))
