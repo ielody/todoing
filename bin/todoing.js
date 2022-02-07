@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 const { input } = require('extras')
 const connection = require('mongowave')
-const c = require('ansi-colors')
+const farge = require('farge')({
+  newline: true
+})
+
 const api = require('../index.js')
 
 let command = process.argv[2]
@@ -14,7 +17,7 @@ if (command[0] == 'd') command = 'done'
 if (command[0] == 'h') command = 'help'
 
 if (!command) {
-  console.log(c.red('Command not found.'))
+  console.log(farge.red.log('Command not found.'))
   // TODO: print menu
   // todo list
   // todo create "Buy milk"
@@ -31,7 +34,7 @@ async function run(){
   if (typeof fn == 'function') {
     await fn(db)
   } else  {
-    console.log(c.red('Command not found.'))
+    console.log(farge.red.log('Command not found.'))
   }
   process.exit(0)
 }
