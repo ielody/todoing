@@ -21,11 +21,11 @@ td u 1 (if you do not enter a task here the app will ask for task input)
 
 # Remove todo
 td r 1
-td r n,n,n (to remove more tasks enter numbers seperated by a comma(1,2,3)).
+td r n,n,n (to remove more tasks enter numbers separated by a comma(1,2,3)).
 
 # Mark todo as done
 td d 1
-td r n,n,n (to mark more tasks enter numbers seperated by a comma(1,2,3)).
+td r n,n,n (to mark more tasks enter numbers separated by a comma(1,2,3)).
 ```
 
 ISC licensed. Enjoy!
