@@ -9,14 +9,7 @@ const api = require('../index.js')
 
 let command = process.argv[2]
 
-  if (command[0] == 'l') command = 'list'
-  if (command[0] == 'c') command = 'create'
-  if (command[0] == 'u') command = 'update'
-  if (command[0] == 'r') command = 'remove'
-  if (command[0] == 'd') command = 'done'
-  if (command[0] == 'h') command = 'help'
-
-  else if (!command) {
+if (typeof command != 'string') {
     farge.red.log('Command not found.')
   // TODO: print menu
   // todo list
@@ -25,7 +18,15 @@ let command = process.argv[2]
   // todo remove 1
   // todo done 1
   process.exit(0)
- }
+}
+
+if (command[0] == 'l') command = 'list'
+if (command[0] == 'c') command = 'create'
+if (command[0] == 'u') command = 'update'
+if (command[0] == 'r') command = 'remove'
+if (command[0] == 'd') command = 'done'
+if (command[0] == 'h') command = 'help'
+
 
 async function run(){
   const db = await connection({ name: 'todoing' })

@@ -12,7 +12,6 @@
   "author": "Ingeborg Eldøy <ieldoy@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "ansi-colors": "^4.1.1",
     "extras": "^0.10.4",
     "farge": "^0.1.1",
     "mongowave": "^0.2.6"
