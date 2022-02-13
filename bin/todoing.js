@@ -27,7 +27,6 @@ if (command[0] == 'r') command = 'remove'
 if (command[0] == 'd') command = 'done'
 if (command[0] == 'h') command = 'help'
 
-
 async function run(){
   const db = await connection({ name: 'todoing' })
 
