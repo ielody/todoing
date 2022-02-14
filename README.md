@@ -23,8 +23,9 @@ td u 1 (if you do not enter a task here the app will ask for task input)
 td r 1
 td r n,n,n (to remove more tasks enter numbers separated by a comma(1,2,3)).
 td r (if you do not enter a number the app will ask for task input)
+td r all (remove all tasks)
 
-# Mark todo as done
+# Mark todo as done or undone
 td d 1
 td d n,n,n (to mark more tasks enter numbers separated by a comma(1,2,3)).
 td d (if you do not enter a number here the app will ask for task input)
