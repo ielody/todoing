@@ -14,8 +14,9 @@ td c (if you do not enter a task here the app will ask for task input)
 
 # Show list
 td l
-td l 3 (#show list with only three first items)
-td l 5 (#show list with only five first items)
+td l 1 (#show list with first item)
+td l 3 (#show list with three first items)
+td l 5 (#show list with five first items)
 
 # Update todo
 td u 1 "Go for a walk"
