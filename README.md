@@ -14,6 +14,7 @@ td c (if you do not enter a task here the app will ask for task input)
 
 # Show list
 td l
+td l 1 (#show list with only first item)
 
 # Update todo
 td u 1 "Go for a walk"
