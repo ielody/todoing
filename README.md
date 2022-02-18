@@ -16,7 +16,6 @@ td c (if you do not enter a task here the app will ask for task input)
 td l (#shows all tasks)
 td l 1, 3, 5 or 7 (#show list with 1, 3, 5 or 7 items in list)
 
-
 # Update todo
 td u 1 "Go for a walk"
 td u 1 (if you do not enter a task here the app will ask for task input)
@@ -35,6 +34,7 @@ td d all (marks all tasks as done)
 
 # Todoing aliases
 Add this to your .zshrc or .bashrc file to speed things up:
+alias tc="td create"
 alias tl="td list"
 alias tr="td remove"
 alias tdd="td done"
