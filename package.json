@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "extras": "^0.10.4",
-    "farge": "^0.1.1",
+    "farge": "^0.1.3",
     "mongowave": "^0.2.6",
     "spekk": "^0.2.1"
   }
