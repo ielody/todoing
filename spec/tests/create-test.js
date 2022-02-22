@@ -28,6 +28,6 @@ it('should create a new todo', async ({ t, db, state, mock, restore }) => {
   t.ok(state.logs[1] == 'Enter task:\n')
   t.ok(state.logs[2].includes('hello added'))
 
-  const count = await db('todo').count()
-  t.ok(count === 1)
+  const todo = await db('todo').get()
+  t.ok(todo.task == 'hello')
 })
