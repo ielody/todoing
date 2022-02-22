@@ -7,13 +7,14 @@
     "td": "bin/todoing.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon -q --exec spekk"
   },
   "author": "Ingeborg Eldøy <ieldoy@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "extras": "^0.10.4",
     "farge": "^0.1.1",
-    "mongowave": "^0.2.6"
+    "mongowave": "^0.2.6",
+    "spekk": "^0.2.1"
   }
 }
