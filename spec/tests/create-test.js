@@ -1,6 +1,10 @@
-const task = require('/.create.js')
+const task = require('../../lib/create.js')
+const connection = require('mongowave')
 
 test('creates a task object', async ({ t }) => {
-  if (await db('todo').create({ task }))
+  const db = await connection({ name: 'todoing' })
+  await db('todo').create({ task })
   t.ok(true)
 } )
+
+
