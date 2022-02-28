@@ -7,7 +7,8 @@
     "td": "bin/todoing.js"
   },
   "scripts": {
-    "test": "nodemon -q --exec spekk"
+    "test": "nodemon -q --exec spekk",
+    "bin": "node bin/todoing.js"
   },
   "author": "Ingeborg Eldøy <ieldoy@gmail.com>",
   "license": "ISC",
