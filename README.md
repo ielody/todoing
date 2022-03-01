@@ -13,8 +13,8 @@ td c "Do yoga"
 td c (if you do not enter a task here the app will ask for task input)
 
 # Show list
-td l (#shows all tasks)
-td l number (#show list with number of items in the list)
+td l (show all tasks)
+td l number (show list with number of items in the list)
 
 # Update todo
 td u 1 "Go for a walk"
@@ -22,13 +22,13 @@ td u 1 (if you do not enter a task here the app will ask for task input)
 
 # Remove todo
 td r 1
-td r number, number (to remove more tasks enter numbers separated by a comma(1,2,3)).
+td r n,n,n (to remove more tasks enter numbers separated by a comma(1,2,3)).
 td r (if you do not enter a number the app will ask for task input)
 td r all (remove all tasks)
 
 # Mark todo as done or undone
 td d 1
-td d number,number (to mark more tasks enter numbers separated by a comma(1,2,3)).
+td d n,n,n (to mark more tasks enter numbers separated by a comma(1,2,3)).
 td d (if you do not enter a number here the app will ask for task input)
 td d all (marks all tasks as done)
 
