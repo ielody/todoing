@@ -8,7 +8,7 @@ it('should list empty tasks', async ({ t, db, state, mock, restore }) => {
   restore()
 
   t.ok(Object.keys(state.logs).length === 1)
-  t.ok(state.logs[0] == 'Your tasks\n')
+  t.ok(state.logs[0] == "You don't have any tasks\n")
 
 
   const count = await db('todo').count()

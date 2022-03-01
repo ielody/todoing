@@ -33,6 +33,11 @@ module.exports = async function run () {
   async function before() {
     reset()
     await db.drop()
+
+    // Remove all args
+    for (var i = 2; i < process.argv.length; i++) {
+      process.argv[i] = undefined
+    }
   }
 
   // Run after each test if defined

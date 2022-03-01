@@ -39,9 +39,10 @@ it('should update the numbered task', async ({ t, db, state, mock, restore }) =>
   await db('todo').create({ task: 'yoga' })
   await db('todo').create({ task: 'basket' })
 
-  state.inputs = ['fotball']
+  state.inputs = ['']
 
   process.argv[3] = '1'
+  process.argv[4] = 'fotball'
 
   mock()
 
