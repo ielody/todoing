@@ -11,7 +11,7 @@ it('should not find when no todos', async ({ t, db, state, mock, restore }) => {
   t.ok(state.logs[0] == 'Todo not found\n')
 })
 
-o('should update number from input', async ({ t, db, state, mock, restore }) => {
+it('should update number from input', async ({ t, db, state, mock, restore }) => {
   await db('todo').create({ task: 'yoga' })
   await db('todo').create({ task: 'basket' })
 
@@ -49,9 +49,8 @@ it('should update the numbered task', async ({ t, db, state, mock, restore }) =>
 
   restore()
 
-  t.ok(Object.keys(state.logs).length === 2)
-  t.ok(state.logs[0] == 'New task\n')
-  t.ok(state.logs[1] == 'Updated 1 to fotball\n')
+  t.ok(Object.keys(state.logs).length === 1)
+  t.ok(state.logs[0] == 'Updated 1 to fotball\n')
 
   const todos = await db('todo').find()
   t.ok(todos.length == 2)
