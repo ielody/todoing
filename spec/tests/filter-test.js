@@ -16,12 +16,12 @@ it('should list empty tasks', async ({ t, db, state, mock, restore }) => {
 })
 
 
-it('should take word from input and list tasks', async ({ t, db, state, mock, restore }) => {
+it('should take word or number from input and list tasks', async ({ t, db, state, mock, restore }) => {
 
   await db('todo').create({ task: 'coffee' })
   await db('todo').create({ task: 'tea' })
 
-  process.argv[3] = 'coffee'
+  process.argv[3] = 'tea'
 
   mock()
 
@@ -30,11 +30,9 @@ it('should take word from input and list tasks', async ({ t, db, state, mock, re
   restore()
 
   t.ok(Object.keys(state.logs).length === 1)
-  t.ok(state.logs[0] == 'Find tasks containing your chosen word\n')
+  t.ok(state.logs[0] == "Type a word or number\n")
 
-  const filterWord = await db('todo').find({ task: 'coffee' } )
-  console.log(filterWord)
+  const filterWord = await db('todo').find({ task: 'tea' } )
   t.ok(filterWord.length == 1)
-  t.ok(filterWord[0].task == 'coffee')
-
+  t.ok(filterWord[0].task == 'tea')
 })
