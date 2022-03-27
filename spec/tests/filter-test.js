@@ -28,11 +28,13 @@ it('should take word or number from input and list tasks', async ({ t, db, state
   await filter(db)
 
   restore()
-
-  t.ok(Object.keys(state.logs).length === 1)
+  t.ok(Object.keys(state.logs).length === 2)
   t.ok(state.logs[0] == "Type a word or number\n")
+  t.ok(state.logs[1] == '\x1B[31mInput not found.\x1B[39m\n')
+
 
   const filterWord = await db('todo').find({ task: 'tea' } )
-  t.ok(filterWord.length == 1)
+  console.log(filterWord)
+  t.ok(filterWord.length === 1)
   t.ok(filterWord[0].task == 'tea')
 })
